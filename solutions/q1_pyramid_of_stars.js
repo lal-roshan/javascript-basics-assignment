@@ -1,33 +1,18 @@
 /* Write a program to build a `Pyramid of stars` of given height */
 
-const buildPyramid = () => {
-     // Write your code here
-
-     function pyramid(height){
-          let result = "";
+const buildPyramid = (height) => {
+     //prints pyramid based on height provided
+     let result = "";
           for(let i=1;i <= height; i++){
-               for(let k=0;k<height - i;k++){
+               for(let k=0;k<= height - i;k++){
                     result += " ";
                }
-               for(let j=1;j < i; j++){
+               for(let j=1;j <= i; j++){
                     result += "* ";
                }
-               result += "*\n";
+               result += " \n";
           }
-          return result;
-     }
+      return result;
 };
 
-/* For example,
-INPUT - buildPyramid(6)
-OUTPUT -
-     *
-    * *
-   * * *
-  * * * *
- * * * * *
-* * * * * *
-
-*/
-
-// module.exports = buildPyramid;
+module.exports = buildPyramid;
