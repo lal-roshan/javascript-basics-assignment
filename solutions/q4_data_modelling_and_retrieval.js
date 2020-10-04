@@ -5,3 +5,13 @@
 
 // Write your code here
 
+let fruitsList = [];
+fruitsList.push({ name: "apple", color: "red", pricePerKg: 120.00});
+fruitsList.push({ name: "apple", color: "green", pricePerKg: 180.00});
+fruitsList.push({ name: "orange", color: "orange", pricePerKg: 100.00});
+fruitsList.push({ name: "grapes", color: "green", pricePerKg: 110.00});
+fruitsList.push({ name: "grapes", color: "blue", pricePerKg: 90.00});
+fruitsList.push({ name: "grapes", color: "red", pricePerKg: 100.00});
+
+// let fruits = fruitsList.reduce((result, item) => result[]);
+
