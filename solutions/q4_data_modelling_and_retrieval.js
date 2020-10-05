@@ -15,17 +15,19 @@ fruitsList.push({ name: "grapes", color: "red", pricePerKg: 100.00 });
 
 let fruits = {};
 
-for (let i = 0; i < fruitsList.length; i++) {
-    let newData = { color: fruitsList[i]["color"], pricePerKg: fruitsList[i]["pricePerKg"] };
-    let fruitsItem = fruits[fruitsList[i]["name"]];
-    if (fruitsItem) {
-        fruitsItem.push(newData);
+//for each element in fruitsList we seperate the name field and the rest of its properties
+fruitsList.forEach(element => {
+    let { name, ...properties } = element;
+
+    //If the result list has a key with the current fruit name, then its a different variety of the
+    //same fruit and needs to be added under same key
+    if (fruits.hasOwnProperty(name)) {
+        fruits[name].push(properties);
     }
     else {
-        fruitsItem = new Array(newData);
+        fruits[name] = new Array(properties);
     }
-    fruits[fruitsList[i]["name"]] = fruitsItem;
-}
+});
 
 console.log(fruits.apple);
 console.log(fruits.orange);
